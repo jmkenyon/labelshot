@@ -3,19 +3,20 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY!);
 
 export async function POST(req: Request) {
+  try {
     const { email } = await req.json();
     await resend.emails.send({
-    from: "Labelshot <noreply@labelshot.io>",
-    to: email,
-    subject: "You're on the list — Labelshot 💜",
-    text: `You're officially on the Labelshot waitlist.
+      from: "Labelshot <noreply@labelshot.io>",
+      to: email,
+      subject: "You're on the list — Labelshot 💜",
+      text: `You're officially on the Labelshot waitlist.
 
 We’re building the fastest way to turn supplement labels into studio-ready product images.
 
 We’ll let you know as soon as early access opens.
 
 — Labelshot`,
-    html: `
+      html: `
       <div style="font-family: Inter, system-ui, -apple-system, sans-serif; background:#f5f5f5; padding:40px;">
         <div style="max-width:560px; margin:0 auto; background:#ffffff; border-radius:16px; padding:40px;">
           
@@ -56,5 +57,19 @@ We’ll let you know as soon as early access opens.
         </div>
       </div>
     `,
-  });
+    });
+
+    return new Response(JSON.stringify({ success: true }), {
+      headers: { "Content-Type": "application/json" },
+    });
+  } catch (error) {
+    console.log(error);
+    return new Response(
+      JSON.stringify({ success: false, error: "Failed to send email" }),
+      {
+        headers: { "Content-Type": "application/json" },
+        status: 500,
+      }
+    );
+  }
 }
