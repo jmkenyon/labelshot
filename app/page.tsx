@@ -44,6 +44,7 @@ export default function Landing() {
         });
       } catch {
         toast.error("Failed to send confirmation email");
+        
       }
     } catch {
       toast.error("An error occurred. Please try again.");
