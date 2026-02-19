@@ -1,5 +1,6 @@
 "use client";
 
+import { sendWaitlistEmail } from "@/lib/email";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
@@ -33,6 +34,7 @@ export default function Landing() {
 
       toast.success("Thanks for signing up! We’ll be in touch.");
       setSubmitted(true);
+      sendWaitlistEmail(email)
     } catch {
       toast.error("An error occurred. Please try again.");
     }

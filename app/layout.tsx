@@ -10,7 +10,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Labelshot — Turn Your Label Into a Product Image",
   description:
-    "Upload your supplement label and instantly generate photorealistic product images. No photographers. No Photoshop. No distorted ingredients. Built for Shopify brands.",
+    "Upload your supplement label and instantly generate photorealistic product images. No photographers. No Photoshop. No distorted ingredients.",
   keywords: [
     "supplement product images",
     "AI product rendering",
