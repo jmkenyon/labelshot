@@ -29,15 +29,15 @@ We’ll let you know as soon as early access opens.
           </p>
 
           <p style="font-size:16px; color:#555; line-height:1.6;">
-            We’re building the fastest way to turn your flat supplement label
-            into a <strong>studio-ready product image</strong>.
+            We’re building the fastest way to turn your 2D supplement label
+            into a <strong>store-ready product image</strong>.
           </p>
 
           <div style="margin:28px 0; padding:20px; background:#f3f0ff; border-radius:12px;">
             <p style="margin:0; font-size:15px; color:#4c1d95;">
               No distorted ingredients.  
-              No AI-mangled text.  
-              Just clean, photorealistic renders.
+              No AI-distorted text.  
+              Just your label, wrapped perfectly, every time.
             </p>
           </div>
 
